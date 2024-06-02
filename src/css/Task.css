@@ -1,0 +1,51 @@
+/* Task container */
+.task {
+  margin-bottom: 20px; /* Spacing between tasks */
+  padding: 20px; /* Padding around task content */
+  border: 1px solid #ccc; /* Border around task */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Task title */
+.task-title {
+  margin-top: 0; /* Remove top margin */
+}
+
+/* Task detail paragraphs */
+.task-detail {
+  margin: 10px 0; /* Spacing between task details */
+}
+
+/* Task buttons container */
+.task-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+/* Individual task buttons */
+.task-button {
+  padding: 12px 24px; /* Padding inside buttons */
+  margin-left: 10px; /* Spacing between buttons */
+  border: none; /* Remove button borders */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 16px; /* Button text size */
+}
+
+/* Delete button */
+.task-button.delete {
+  background-color: #dc3545; /* Red delete button */
+  color: #fff; /* White text color */
+}
+
+/* Update button */
+.task-button.update {
+  background-color: #007bff; /* Blue update button */
+  color: #fff; /* White text color */
+}
+
+/* Cancel button */
+.task-button.cancel {
+  background-color: #ffc107; /* Yellow cancel button */
+  color: #212529; /* Dark text color */
+}

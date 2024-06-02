@@ -1,0 +1,35 @@
+/* Todo List container */
+.todo-list-container {
+    padding: 20px;
+  }
+  
+  /* Header bar style */
+  .header-bar {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding inside the header bar */
+    margin-bottom: 20px; /* Margin bottom to separate from task list */
+  }
+  
+  /* Header style */
+  .todo-list-header {
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Task list style */
+  .task {
+    margin-bottom: 10px; /* Margin bottom to separate tasks */
+    border: 1px solid #ccc; /* Border around each task */
+    padding: 10px; /* Padding inside each task */
+    border-radius: 5px; /* Rounded corners for tasks */
+  }
+  
+  /* Task title style */
+  .task h3 {
+    margin-top: 0; /* Remove default margin */
+  }
+  
+  /* Task buttons style */
+  .task button {
+    margin-right: 5px; /* Margin right to separate buttons */
+  }
