@@ -40,7 +40,7 @@ const UpdateTodoForm = ({ showUpdateModal, task, onSubmit }) => {
           <div className="modal">
             {/* Close button */}
             <span className="close-modal-btn" onClick={() => setShowModal(false)}>&times;</span>
-            <h2>Update Task</h2>
+            <h2>Update A Task</h2>
             {/* Form */}
             <form onSubmit={handleSubmit}>
               {/* Title input */}

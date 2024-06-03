@@ -86,7 +86,7 @@ const TodoForm = ({ onSubmit }) => {
                 </>
               )}
               {/* Submit button */}
-              <button type="submit">Add Task</button>
+              <button type="submit">Add A Task</button>
             </form>
           </div>
         </div>
