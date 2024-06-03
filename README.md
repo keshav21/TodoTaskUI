@@ -1,70 +1,108 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# TodoTaskUI
 
-## Available Scripts
+TodoTaskUI is a simple React-based user interface for managing todo tasks. It provides a clean and intuitive interface for users to add, view, update, and delete tasks.
 
-In the project directory, you can run:
+## Features
 
-### `yarn start`
+- Add new tasks with titles, descriptions, due dates, priorities, and statuses.
+- View all tasks in a list with filtering and sorting options.
+- Update task details or mark tasks as complete/incomplete.
+- Delete tasks individually or in bulk.
+- Supports recurring tasks with customizable recurrence patterns.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deployment Steps
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Follow these steps to deploy TodoTaskUI in your Kubernetes cluster:
 
-### `yarn test`
+1. **Build Docker Image:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   Build the Docker image for TodoTaskUI using the provided Dockerfile:
 
-### `yarn build`
+   ```sh
+   docker build -t your-docker-registry/todotaskui:latest .
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Push Docker Image:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Push the Docker image to your Docker registry (e.g., Docker Hub, Google Container Registry):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```sh
+   docker push your-docker-registry/todotaskui:latest
+   ```
 
-### `yarn eject`
+3. **Kubernetes Deployment:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Apply the Kubernetes deployment YAML to deploy TodoTaskUI with 3 replicas:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```sh
+   kubectl apply -f kubernetes-deployment.yaml
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Kubernetes Service:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Apply the Kubernetes service YAML to expose TodoTaskUI within the cluster:
 
-## Learn More
+   ```sh
+   kubectl apply -f kubernetes-service.yaml
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Kubernetes Ingress (Optional):**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   If you want to access TodoTaskUI from outside the cluster, apply the Kubernetes ingress YAML:
 
-### Code Splitting
+   ```sh
+   kubectl apply -f kubernetes-ingress.yaml
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. **Access TodoTaskUI:**
 
-### Analyzing the Bundle Size
+   Once deployed, access TodoTaskUI in your browser using the configured URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Run Locally
 
-### Making a Progressive Web App
+To run TodoTaskUI locally, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Clone the Repository:**
 
-### Advanced Configuration
+   ```sh
+   git clone https://github.com/keshav21/TodoTaskUI.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. **Navigate to the Project Directory:**
 
-### Deployment
+   ```sh
+   cd TodoTaskUI
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Install Dependencies:**
 
-### `yarn build` fails to minify
+   Install project dependencies using Yarn:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```sh
+   yarn install
+   ```
+
+4. **Start the Development Server:**
+
+   Run the following command to start the development server:
+
+   ```sh
+   yarn start
+   ```
+
+5. **Access TodoTaskUI:**
+
+   Open your browser and navigate to `http://localhost:3000` to access TodoTaskUI locally.
+
+## Configuration
+
+You can customize TodoTaskUI by adjusting the following environment variables:
+
+- `REACT_APP_API_BASE_URL`: Base URL for the backend API (default: `http://localhost:8000`).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
