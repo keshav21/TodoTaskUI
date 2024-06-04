@@ -1,5 +1,4 @@
 
-```markdown
 # TodoTaskUI
 
 TodoTaskUI is a simple React-based user interface for managing todo tasks. It provides a clean and intuitive interface for users to add, view, update, and delete tasks.
@@ -105,4 +104,3 @@ You can customize TodoTaskUI by adjusting the following environment variables:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
