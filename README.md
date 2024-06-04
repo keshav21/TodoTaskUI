@@ -9,8 +9,8 @@ TodoTaskUI is a simple React-based user interface for managing todo tasks. It pr
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Features](#features)
-- [Run Locally](#run-locally)
 - [Configuration](#configuration)
+- [Run Locally](#run-locally)
 - [Deployment Steps](#deployment-steps)
 - [License](#license)
 
@@ -33,6 +33,13 @@ Before you begin, ensure you have met the following requirements:
 - Delete tasks individually or in bulk.
 - Supports recurring tasks with customizable recurrence patterns.
 
+
+## Configuration
+
+Make sure the backend app is running:
+- `Backend App`: [TodoTaskBackend](https://github.com/keshav21/TodoTaskBackend)
+
+- `BASE_URL`: Base URL for the backend API (default: `http://localhost:5000`).
 
 ## Run Locally
 
@@ -69,12 +76,6 @@ To run TodoTaskUI locally, follow these steps:
 5. **Access TodoTaskUI:**
 
    Open your browser and navigate to `http://localhost:3000` to access TodoTaskUI locally.
-
-## Configuration
-
-You can customize TodoTaskUI by adjusting the following environment variables:
-
-- `REACT_APP_API_BASE_URL`: Base URL for the backend API (default: `http://localhost:8000`).
   
 
 ## Deployment Steps
