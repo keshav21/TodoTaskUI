@@ -37,9 +37,9 @@ Before you begin, ensure you have met the following requirements:
 ## Configuration
 
 Make sure the backend app is running:
-- `Backend App`: [TodoTaskBackend](https://github.com/keshav21/TodoTaskBackend)
+- `Backend App` : [TodoTaskBackend](https://github.com/keshav21/TodoTaskBackend)
 
-- `BASE_URL`: Base URL for the backend API (default: `http://localhost:5000`).
+- `BASE_URL` : Base URL for the backend API (default: `http://localhost:5000`).
 
 ## Run Locally
 
