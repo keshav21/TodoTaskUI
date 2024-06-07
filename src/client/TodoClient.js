@@ -2,7 +2,7 @@ class TodoApiClient {
     constructor(username, password) {
       this.username = username;
       this.password = password;
-      this.baseUrl = 'http://localhost:5000/api/todo';
+      this.baseUrl = 'https://localhost:5000/api/todo';
     }
   
     async fetchData() {
